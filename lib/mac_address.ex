@@ -59,6 +59,7 @@ defmodule MACAddress do
       0 -> :error
       [0, 0, 0, 0, 0, 0] -> :error
       [_, _, _, _, _, _] = addr -> {:ok, addr |> IO.iodata_to_binary()}
+      _ -> :error
     end
   end
 
